@@ -62,19 +62,19 @@ After a simulation run:
 3. Run the script. Outputs are written to:
 02_MATLAB_Simulink/Results/figures_export_<scenario>/
 
-Each scenario folder contains vector PDF and 600 dpi PNG figures plus a CSV performance table (`Table1_ITAE_ControlEffort_<scenario>.csv`).
+Each scenario folder contains vector PDF and 600 dpi PNG figures, plus a CSV performance table (`Table1_ITAE_ControlEffort_<scenario>.csv`).
 
-### Generated Figures
+## Generated Figures
 
-| Figure | Content |
-|--------|---------|
-| Joint Tracking | Desired vs. actual joint positions |
-| Tracking Error | Per-joint tracking error over time |
-| Sliding Surface | Sliding variables \(s_1, s_2, s_3\) |
-| Torque | Control inputs \(\tau_1, \tau_2, F_3\) |
-| Adaptive Gain | Disturbance vs. adaptive gain \(k_1\) (ASTSMC) |
-| Cartesian Tracking | End-effector \(X\), \(Y\), and \(d_3\) |
-| Spiral Tracking | XY path comparison (spiral scenarios) |
+| Figure               | Content |
+|----------------------|---------|
+| Joint Tracking       | Desired vs. actual joint positions |
+| Tracking Error       | Per-joint tracking error over time |
+| Sliding Surface      | Sliding variables (s₁, s₂, s₃) |
+| Torque               | Control inputs (τ₁, τ₂, F₃) |
+| Adaptive Gain        | Disturbance vs. adaptive gain (k₁) (ASTSMC) |
+| Cartesian Tracking   | End-effector (X), (Y), and (d₃) |
+| Spiral Tracking      | XY path comparison (spiral scenarios) |
 
 Performance metrics computed per controller: ITAE (per joint and total) and control effort (L2 norm and RMS).
 
@@ -88,5 +88,4 @@ The primary write-up is in `03_Manuscript/`, provided as both `.docx` and `.pdf`
 
 ## Notes
 
-- Simulink build artifacts (`slprj/`, `*.slxc`) are excluded via `.gitignore` and should not be committed.
 - Always set `scenario` in `Generate_Publication_Figures.m` before running so outputs from different test runs do not overwrite each other.

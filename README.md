@@ -4,7 +4,7 @@ Design, simulation, and manuscript materials for a three-degree-of-freedom (3DOF
 
 ## Overview
 
-The manipulator has two revolute joints (\(\theta_1\), \(\theta_2\)) and one prismatic joint (\(d_3\)) for vertical nozzle motion. Simulink models compare three sliding-mode controllers:
+The manipulator has two revolute joints (θ₁, θ₂) and one prismatic joint (d₃) for vertical nozzle motion. Simulink models compare three sliding-mode controllers:
 
 | Controller | Description |
 |------------|-------------|

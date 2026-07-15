@@ -13,41 +13,25 @@ The manipulator has two revolute joints (\(\theta_1\), \(\theta_2\)) and one pri
 | **ASTSMC** | Adaptive super-twisting sliding-mode control |
 
 Test scenarios include step and spiral Cartesian trajectories, with optional external disturbances and payload/parameter variation.
-.
-├── 01_SolidWorks_CAD/                # Mechanical design (SolidWorks)
-│   ├── Assemblies/                   # Full robot assembly and drawing
-│   └── Parts/                        # Individual components (links, nozzle, housings)
-├── 02_MATLAB_Simulink/               # Dynamic model and control simulation
-│   ├── Injera_Dispensing_Manipulator.slx
-│   ├── Generate_Publication_Figures.m
-│   └── Results/                      # Exported figures and performance tables
-│       ├── figures_export_Step/
-│       ├── figures_export_Step_Disturbance/
-│       ├── figures_export_Spiral/
-│       ├── figures_export_Spiral_Disturbance/
-│       └── figures_export_ParamVariation_20pct/
-└── 03_Manuscript/                     # Research paper
-    ├── 3DOF_Injera_Dispensing_Manipulator.docx
-    ├── 3DOF_Injera_Dispensing_Manipulator.pdf
-    └── LaTeX/                         # LaTeX source (to be added)
+
 ## Repository Structure
 .
-├── 01_SolidWorks_CAD/                # Mechanical design (SolidWorks)
-│   ├── Assemblies/                   # Full robot assembly and drawing
-│   └── Parts/                        # Individual components (links, nozzle, housings)
-├── 02_MATLAB_Simulink/               # Dynamic model and control simulation
+├── 01_SolidWorks_CAD/                        # Mechanical design (SolidWorks)
+│   ├── Assemblies/                           # Full robot assembly and drawing
+│   └── Parts/                                # Individual components (links, nozzle, housings)
+├── 02_MATLAB_Simulink/                       # Dynamic model and control simulation
 │   ├── Injera_Dispensing_Manipulator.slx
 │   ├── Generate_Publication_Figures.m
-│   └── Results/                      # Exported figures and performance tables
+│   └── Results/                              # Exported figures and performance tables
 │       ├── figures_export_Step/
 │       ├── figures_export_Step_Disturbance/
 │       ├── figures_export_Spiral/
 │       ├── figures_export_Spiral_Disturbance/
 │       └── figures_export_ParamVariation_20pct/
-└── 03_Manuscript/                     # Research paper
+└── 03_Manuscript/                            # Research paper
     ├── 3DOF_Injera_Dispensing_Manipulator.docx
     ├── 3DOF_Injera_Dispensing_Manipulator.pdf
-    └── LaTeX/                         # LaTeX source (to be added)
+    └── LaTeX/                                # LaTeX source (to be added)
 
 ## Requirements
 

@@ -64,6 +64,19 @@ After a simulation run:
 
 Each scenario folder contains vector PDF and 600 dpi PNG figures plus a CSV performance table (`Table1_ITAE_ControlEffort_<scenario>.csv`).
 
+## Generating Publication Figures
+
+After a simulation run:
+
+1. Open `Generate_Publication_Figures.m`.
+
+2. Set the `scenario` variable to match the test you just ran. This string is used directly as the output folder name, so it must match exactly:
+
+   ```matlab
+   scenario = 'Spiral';   % Options: 'Step', 'Step_Disturbance',
+                          %          'Spiral', 'Spiral_Disturbance',
+                          %          'ParamVariation_20pct'
+
 ### Generated Figures
 
 | Figure | Content |

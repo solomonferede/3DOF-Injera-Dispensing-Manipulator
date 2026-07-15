@@ -12,23 +12,26 @@ The manipulator has two revolute joints (\(\theta_1\), \(\theta_2\)) and one pri
 | **STSMC** | Super-twisting sliding-mode control |
 | **ASTSMC** | Adaptive super-twisting sliding-mode control |
 
-Test scenarios include step and spiral Cartesian trajectories, with optional external disturbances and ±20% parameter variation.
+Test scenarios include step and spiral Cartesian trajectories, with optional external disturbances and payload/parameter variation.
 
 ## Repository Structure
-
-```
 3DOF-Injera-Dispensing-Manipulator/
-├── 01_SolidWorks_CAD/          # Mechanical design (SolidWorks)
-│   ├── Assemblies/             # Full robot assembly and drawing
-│   └── Parts/                  # Individual components (links, nozzle, housings)
-├── 02_MATLAB_Simulink/         # Dynamic model and control simulation
+├── 01_SolidWorks_CAD/                # Mechanical design (SolidWorks)
+│   ├── Assemblies/                   # Full robot assembly and drawing
+│   └── Parts/                        # Individual components (links, nozzle, housings)
+├── 02_MATLAB_Simulink/                # Dynamic model and control simulation
 │   ├── Injera_Dispensing_Manipulator.slx
 │   ├── Generate_Publication_Figures.m
-│   └── Results/                # Exported figures and performance tables
-└── 03_Manuscript/              # Research paper
-    ├── 3DOF_Injera_Dispensing_Manipulator.docx
-    └── LaTeX/                  # LaTeX source (placeholder)
-```
+│   └── Results/                       # Exported figures and performance tables
+│       ├── figures_export_Step/
+│       ├── figures_export_Step_Disturbance/
+│       ├── figures_export_Spiral/
+│       ├── figures_export_Spiral_Disturbance/
+│       └── figures_export_ParamVariation_20pct/
+└── 03_Manuscript/                      # Research paper
+├── 3DOF_Injera_Dispensing_Manipulator.docx
+├── 3DOF_Injera_Dispensing_Manipulator.pdf
+└── LaTeX/                          # LaTeX source (to be added)
 
 ## Requirements
 
@@ -48,18 +51,15 @@ Test scenarios include step and spiral Cartesian trajectories, with optional ext
 After a simulation run:
 
 1. Open `Generate_Publication_Figures.m`.
-2. Set the `scenario` variable to match the test you just ran:
-
-   ```matlab
-   scenario = 'Spiral';   % 'Step', 'Spiral', 'Spiral_Disturbance',
-                          % 'Step_Disturbance', 'ParamVariation'
-   ```
-
+2. Set the `scenario` variable to match the test you just ran. This string is used directly as the output folder name, so it must match exactly:
+```matlab
+   scenario = 'Spiral';   % one of:
+                          % 'Step', 'Step_Disturbance',
+                          % 'Spiral', 'Spiral_Disturbance',
+                          % 'ParamVariation_20pct'
+```
 3. Run the script. Outputs are written to:
-
-   ```
-   02_MATLAB_Simulink/Results/figures_export_<scenario>/
-   ```
+02_MATLAB_Simulink/Results/figures_export_<scenario>/
 
 Each scenario folder contains vector PDF and 600 dpi PNG figures plus a CSV performance table (`Table1_ITAE_ControlEffort_<scenario>.csv`).
 
@@ -79,13 +79,13 @@ Performance metrics computed per controller: ITAE (per joint and total) and cont
 
 ## CAD
 
-The SolidWorks assembly `Scara_injera_robot.SLDASM` includes the base, two links, prismatic shaft/housing, joint housings, and dispensing nozzle. A preview image is available in `01_SolidWorks_CAD/Assemblies/Scara_injera_robot.PNG`.
+The SolidWorks assembly in `01_SolidWorks_CAD/Assemblies/` includes the base, two links, prismatic shaft/housing, joint housings, and dispensing nozzle. Individual components are in `01_SolidWorks_CAD/Parts/`.
 
 ## Manuscript
 
-The primary write-up is `03_Manuscript/3DOF_Injera_Dispensing_Manipulator.docx`. LaTeX source will be added under `03_Manuscript/LaTeX/`.
+The primary write-up is in `03_Manuscript/`, provided as both `.docx` and `.pdf`. LaTeX source will be added under `03_Manuscript/LaTeX/` in a future update.
 
 ## Notes
 
-- Simulink build artifacts (`slprj/`, `*.slxc`) are excluded via `.gitignore`.
+- Simulink build artifacts (`slprj/`, `*.slxc`) are excluded via `.gitignore` and should not be committed.
 - Always set `scenario` in `Generate_Publication_Figures.m` before running so outputs from different test runs do not overwrite each other.

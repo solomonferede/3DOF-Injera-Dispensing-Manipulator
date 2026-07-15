@@ -15,6 +15,7 @@ The manipulator has two revolute joints (\(\theta_1\), \(\theta_2\)) and one pri
 Test scenarios include step and spiral Cartesian trajectories, with optional external disturbances and payload/parameter variation.
 
 ## Repository Structure
+
 .
 ├── 01_SolidWorks_CAD/                        # Mechanical design (SolidWorks)
 │   ├── Assemblies/                           # Full robot assembly and drawing

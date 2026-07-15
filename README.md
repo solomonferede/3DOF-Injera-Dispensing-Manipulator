@@ -16,7 +16,7 @@ Test scenarios include step and spiral Cartesian trajectories, with optional ext
 
 ## Repository Structure
 ```
-.
+3DOF-Injera-Dispensing-Manipulator
 ├── 01_SolidWorks_CAD/                        # Mechanical design (SolidWorks)
 │   ├── Assemblies/                           # Full robot assembly and drawing
 │   └── Parts/                                # Individual components (links, nozzle, housings)

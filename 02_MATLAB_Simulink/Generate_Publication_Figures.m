@@ -12,7 +12,7 @@
 clear S results
 
 %% ---- 0. SCENARIO LABEL (EDIT THIS BEFORE EACH RUN) --------------------
-scenario = 'Spiral';   % e.g. 'Step', 'Spiral', 'Spiral_Disturbance', 'ParamVariation'
+scenario = 'Step';   % e.g. 'Step', 'Spiral', 'Spiral_Disturbance', 'ParamVariation'
 
 outdir = fullfile(pwd, 'Results', ['figures_export_' scenario]);
 if ~exist(outdir, 'dir'), mkdir(outdir); end
